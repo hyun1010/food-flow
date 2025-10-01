@@ -5,10 +5,12 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "check-types": "turbo run check-types",
-    "biome-check": "biome check --write"
+    "biome-check": "biome check --write",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.4",
+    "husky": "^9.1.7",
     "turbo": "^2.5.8",
     "typescript": "5.9.2"
   },
