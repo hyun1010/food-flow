@@ -1,0 +1,91 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+  "root": true,
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": false,
+      "correctness": {
+        "noUnusedVariables": "off"
+      },
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noDuplicateObjectKeys": "warn"
+      },
+      "style": {
+        "useImportType": "error",
+        "noNestedTernary": "off",
+        "noRestrictedImports": {
+          "level": "error",
+          "options": {
+            "paths": {
+              "lodash": "Using lodash is not encouraged",
+              "underscore": "Using underscore is not encouraged"
+            }
+          }
+        }
+      },
+      "nursery": {
+        "noImportCycles": "error",
+        "useSortedClasses": {
+          "level": "error",
+          "fix": "safe",
+          "options": {
+            "attributes": ["className"],
+            "functions": ["cn"]
+          }
+        }
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "bracketSpacing": true,
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "semicolons": "always",
+      "trailingCommas": "all"
+    }
+  },
+  "json": {
+    "parser": {
+      "allowTrailingCommas": true,
+      "allowComments": true
+    },
+    "formatter": {
+      "trailingCommas": "none"
+    }
+  },
+  "css": {
+    "assist": {
+      "enabled": false
+    }
+  },
+  "files": {
+    "includes": [
+      "**",
+      "!**/.next/**",
+      "!**/.turbo/**",
+      "!**/node_modules/**",
+      "!**/.next/**",
+      "!**/*.config.js",
+      "!**/*.config.mjs",
+      "!**/dist/**",
+      "!**/build/**",
+      "!**/storybook/**",
+      "!**/storybook-static/**",
+      "!**/public/**",
+      "!**/.cache/**",
+      "!**/coverage/**",
+      "!**/__mocks__/**"
+    ]
+  }
+}
