@@ -17,6 +17,7 @@
     "typescript": "5.9.2"
   },
   "dependencies": {
+    "@repo/biome-config": "workspace:^",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   }
